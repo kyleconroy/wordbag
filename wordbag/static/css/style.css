@@ -1,0 +1,117 @@
+/* general */
+body {
+  font: 1em "lucida Grande",arial,sans-serif;
+  background: url('../images/bg.jpg');
+  color: #333;
+}
+
+p {
+  margin: 6px 0;
+}
+
+a {
+  text-decoration: none;
+  color: #26B3CF;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-family: 'Pacifico', serif;
+  font-size: 78px;
+  font-style: normal;
+  font-weight: 400;
+  text-shadow: none;
+  text-decoration: none;
+  text-transform: none;
+  letter-spacing: 0em;
+  word-spacing: 0em;
+  line-height: 1.2;
+  text-align: center;
+}
+
+#game {
+  position: relative;
+}
+
+#game, header{
+  width: 800px;
+  margin: 0 auto;
+}
+
+header {
+}
+
+h2 {
+  text-align: center;
+  margin-top: 40px;
+}
+
+#rack {
+  background: url('../images/rack.png') no-repeat bottom center;
+  width: 731px;
+  height: 127px;
+  margin: 120px auto 0 auto;
+  text-align: center;
+}
+
+#rack li {
+  position: relative;
+  display: inline-block;
+  vertical-align: bottom;
+  background: url('../images/tile.png') no-repeat top center;
+  width: 79px;
+  height: 69px;
+}
+
+#rack li a {
+  position: absolute;
+  top: -8px;
+  right: 0px;
+}
+
+#rack li p, #rack li div {
+  font-weight: bold;
+  font-family: arial;
+  text-shadow: 1px 1px white;
+}
+
+#rack li p {
+  font-size: 42px;
+  margin-top: 13px;
+}
+
+#rack li div {
+  position: absolute;
+  bottom: 5px;
+  right: 12px;
+}
+
+#counter {
+  position: absolute;
+  top: 100px;
+  right: 50%;
+  width: 140px;
+  margin-right: -70px;
+  text-align: center;
+  background: #333;
+  border-radius: 20px;
+  color: white;
+  font-size: 12px;
+}
+
+form {
+  text-align: center;
+}
+
+.reallybig {
+  margin-top: 40px;
+  font-size: 32px;
+}

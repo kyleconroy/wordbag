@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block js %}
+<script type="text/javascript" src="/js/jquery-1.6.1.min.js"></script>
+<script type="text/javascript" src="/js/handlebars.1.0.0.beta.3.js"></script>
+<script type="text/javascript" src="/js/underscore-min.js"></script>
+<script type="text/javascript" src="/js/backbone-min.js"></script>
+<script type="text/javascript" src="/js/wordbag.js"></script>
+{% endblock %}
+
+{% block content %}
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    wordbag.start("{{ game_key }}");
+  });
+</script>
+
+<aside id="counter">
+  <p>Tiles Left: <span>100</span></p>
+</aside>
+
+<ul id="rack"></ul>
+
+<form action="/games/{{ game_key }}/bag" method="POST">
+  <input type="submit" value="Draw" class="button big primary pill">
+</form>
+
+<script id="letter-template" type="text/x-handlebars-template">
+  <a href="#" class="remove"><img src="/images/cross.png" alt="X"></a>
+  <div>{% templatetag openvariable %}value{% templatetag closevariable %}</div>
+  <p>{% templatetag openvariable %}letter{% templatetag closevariable %}</p>
+</script>
+{% endblock %}
